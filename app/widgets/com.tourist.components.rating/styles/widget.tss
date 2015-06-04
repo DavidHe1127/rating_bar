@@ -1,0 +1,5 @@
+".rating_bar":{
+	width: Ti.UI.SIZE,
+	layout: "horizontal",
+	height: Ti.UI.SIZE
+}

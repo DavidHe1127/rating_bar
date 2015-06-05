@@ -27,7 +27,7 @@ var rating = 0;
 while (i < totalRate) {
 	starStyle.index = i;
 	var star = $.UI.create("ImageView", starStyle);
-	_args.ratable && star.addEventListener("click", onStarClick);
+	_args.ratable && star.addEventListener(OS_IOS ? "click" : "singletap", onStarClick);
 	$.rating_bar.add(star);
 	i++;
 }

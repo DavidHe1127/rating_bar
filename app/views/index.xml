@@ -1,5 +1,5 @@
 <Alloy>
 	<Window class="container">
-		<Widget src="com.tourist.components.rating" ratable=true id="rating" rate="3" size={width:15,height:15} position={top:30} />
+		<Widget src="com.tourist.components.rating" ratable=true id="rating" rate="3" size={width:25,height:25} position={top:30} />
 	</Window>
 </Alloy>

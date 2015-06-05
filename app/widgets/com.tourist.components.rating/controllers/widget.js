@@ -1,24 +1,27 @@
 /**
  * @param {boolean} _args.ratable - if false not allow for rating. false by default
  * @param {integer} _args.rate - 0~5
- * @param {object} _args.position - top/right/bottom/left
- * @param {object} _args.size - width/height
+ *
+ * @param {integer} _args.size - size of the star - width and height are equal
+ *
+ * @param {integer} _args.left
+ * @param {integer} _args.right
+ * @param {integer} _args.top
+ * @param {integer} _args.bottom
+ *
  */
 var _args = arguments[0] || {};
-var position = {};
-var size = {
-	"width" : 20,
-	"height" : 20
-};
 
-$.addClass($.rating_bar, "rating_bar", position);
+var size = _.isNumber(Number(_args.size)) ? Number(_args.size) : 20;
 
 var starStyle = {
-	"width" : size.width,
-	"height" : size.height,
+	"width" : size,
 	"left" : 5,
+	"height" : size,
 	"image" : WPATH(_args.ratable ? "imgs/empty_star.png" : "imgs/full_star.png")
 };
+
+$.rating_bar.applyProperties(_.pick(_args, ["left", "right", "top", "bottom"]));
 
 var totalRate = _args.ratable ? 5 : Number(_args.rate);
 var i = 0;
@@ -27,7 +30,7 @@ var rating = 0;
 while (i < totalRate) {
 	starStyle.index = i;
 	var star = $.UI.create("ImageView", starStyle);
-	_args.ratable && star.addEventListener(OS_IOS ? "click" : "singletap", onStarClick);
+	_args.ratable && star.addEventListener( OS_IOS ? "click" : "singletap", onStarClick);
 	$.rating_bar.add(star);
 	i++;
 }

@@ -12,7 +12,7 @@
  */
 var _args = arguments[0] || {};
 
-var size = _.isNumber(Number(_args.size)) ? Number(_args.size) : 20;
+var size = _.isNumber(_args.size) || _.isString(_args.size) ? _args.size : 20;
 
 var starStyle = {
 	"width" : size,

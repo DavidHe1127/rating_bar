@@ -26,14 +26,19 @@ Check [GitTio](http://gitt.io/)
 
  * @param {boolean} _args.ratable - if false not allow for rating. false by default
  * @param {integer} _args.rate - 0~5
- * @param {object} _args.position - top/right/bottom/left
- * @param {object} _args.size - width/height
+ *
+ * @param {integer} _args.size - size of the star - width and height are equal
+ *
+ * @param {integer} _args.left
+ * @param {integer} _args.right
+ * @param {integer} _args.top
+ * @param {integer} _args.bottom
  
 
 ###Example :
 	<Alloy>
 		  <Window class="container">
-		  	<Widget src="com.tourist.components.rating" ratable=true id="rating" rate="3" size={width:25,height:25} position={top:30} />
+		  	<Widget src="com.tourist.components.rating" ratable=true id="rating" rate="3" size=25 left=15 top=30 />
 		  </Window>
 	</Alloy>
 	

@@ -10,7 +10,7 @@ Alloy](http://www-static.appcelerator.com/badges/alloy-git-badge-sq.png)](http:/
 This widget allows users to rate or purely display the rates only.
 
 ###Demo
-[iOS Gif Demo](demos/ios_demo.gif)
+![iOS Gif Demo](demos/ios_demo.gif)
 
 
 ###How to use it

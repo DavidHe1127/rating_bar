@@ -12,6 +12,8 @@
  */
 var _args = arguments[0] || {};
 
+_args.hasOwnProperty("ratable") && (_args.ratable = _args.ratable == "true");
+
 var size = _.isNumber(_args.size) || _.isString(_args.size) ? _args.size : 20;
 
 var starStyle = {

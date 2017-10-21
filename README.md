@@ -6,15 +6,15 @@ Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](
 Alloy](http://www-static.appcelerator.com/badges/alloy-git-badge-sq.png)](http://appcelerator.com/alloy/)
 [![License](http://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://choosealicense.com/licenses/apache-2.0/)
 
-###Introduction
+### Introduction
 This widget allows users to rate or purely display the rates only.
 
-###Demo
+### Demo
 ![iOS Gif Demo](demos/ios_demo.gif) 
 ![Android Gif Demo](demos/android_demo.gif)
 
 
-###How to use it
+### How to use it
 Check [GitTio](http://gitt.io/)
 
 ## Parameters and methods
@@ -35,7 +35,7 @@ Check [GitTio](http://gitt.io/)
  * @param {integer} _args.bottom
  
 
-###Example :
+### Example :
 	<Alloy>
 		  <Window class="container">
 		  	<Widget src="com.tourist.components.rating" ratable=true id="rating" rate="3" size=25 left=15 top=30 />
